@@ -1,0 +1,59 @@
+/* Cyberpunk Theme Styles */
+.cyber-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 231, 255, 0.5);
+}
+
+    .cyber-button:hover {
+        box-shadow: 0 0 20px rgba(0, 231, 255, 0.8), 0 0 30px rgba(104, 51, 255, 0.6);
+        transform: translateY(-2px);
+    }
+
+    .cyber-button:before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(45deg, #00e7ff, #6833ff, #00e7ff, #6833ff);
+        background-size: 400% 400%;
+        z-index: -1;
+        animation: cyber-glowing 3s ease infinite;
+        border-radius: 8px;
+        opacity: 0.5;
+    }
+
+.cyber-button-small {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 231, 255, 0.3);
+}
+
+    .cyber-button-small:hover {
+        box-shadow: 0 0 10px rgba(0, 231, 255, 0.6), 0 0 15px rgba(104, 51, 255, 0.4);
+        transform: translateY(-1px);
+    }
+
+@keyframes cyber-glowing {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Terminal-like text effect */
+.font-mono {
+    font-family: 'Courier New', monospace;
+    text-shadow: 0 0 5px rgba(0, 231, 255, 0.7);
+}
